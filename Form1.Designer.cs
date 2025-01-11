@@ -32,8 +32,7 @@
             buttonAdd = new Button();
             checkedListBoxTodos = new CheckedListBox();
             buttonRemove = new Button();
-            buttonSave = new Button();
-            buttonLoad = new Button();
+            buttonExit = new Button();
             label1 = new Label();
             points = new Label();
             SuspendLayout();
@@ -53,7 +52,7 @@
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(296, 355);
             buttonAdd.TabIndex = 1;
-            buttonAdd.Text = "Hozzáadás";
+            buttonAdd.Text = "Add";
             buttonAdd.UseVisualStyleBackColor = true;
             buttonAdd.Click += buttonAdd_Click;
             // 
@@ -63,7 +62,7 @@
             checkedListBoxTodos.FormattingEnabled = true;
             checkedListBoxTodos.Location = new Point(320, 290);
             checkedListBoxTodos.Name = "checkedListBoxTodos";
-            checkedListBoxTodos.Size = new Size(830, 719);
+            checkedListBoxTodos.Size = new Size(938, 719);
             checkedListBoxTodos.TabIndex = 2;
             // 
             // buttonRemove
@@ -73,31 +72,20 @@
             buttonRemove.Name = "buttonRemove";
             buttonRemove.Size = new Size(296, 355);
             buttonRemove.TabIndex = 3;
-            buttonRemove.Text = "Eltávolítás";
+            buttonRemove.Text = "Collect\r\nrewards";
             buttonRemove.UseVisualStyleBackColor = true;
             buttonRemove.Click += buttonRemove_Click;
             // 
-            // buttonSave
+            // buttonExit
             // 
-            buttonSave.Font = new Font("Times New Roman", 19.875F);
-            buttonSave.Location = new Point(1156, 654);
-            buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(296, 355);
-            buttonSave.TabIndex = 3;
-            buttonSave.Text = "Mentés";
-            buttonSave.UseVisualStyleBackColor = true;
-            buttonSave.Click += buttonSave_Click;
-            // 
-            // buttonLoad
-            // 
-            buttonLoad.Font = new Font("Times New Roman", 19.875F);
-            buttonLoad.Location = new Point(1156, 290);
-            buttonLoad.Name = "buttonLoad";
-            buttonLoad.Size = new Size(296, 355);
-            buttonLoad.TabIndex = 3;
-            buttonLoad.Text = "Betöltés";
-            buttonLoad.UseVisualStyleBackColor = true;
-            buttonLoad.Click += buttonLoad_Click;
+            buttonExit.Font = new Font("Times New Roman", 19.875F);
+            buttonExit.Location = new Point(1264, 290);
+            buttonExit.Name = "buttonExit";
+            buttonExit.Size = new Size(188, 719);
+            buttonExit.TabIndex = 3;
+            buttonExit.Text = "Exit";
+            buttonExit.UseVisualStyleBackColor = true;
+            buttonExit.Click += buttonLoad_Click;
             // 
             // label1
             // 
@@ -123,8 +111,7 @@
             ClientSize = new Size(1464, 1021);
             Controls.Add(points);
             Controls.Add(label1);
-            Controls.Add(buttonLoad);
-            Controls.Add(buttonSave);
+            Controls.Add(buttonExit);
             Controls.Add(buttonRemove);
             Controls.Add(checkedListBoxTodos);
             Controls.Add(buttonAdd);
@@ -145,7 +132,7 @@
         private CheckedListBox checkedListBoxTodos;
         private Button buttonRemove;
         private Button buttonSave;
-        private Button buttonLoad;
+        private Button buttonExit;
         private Label label1;
         private Label points;
     }

@@ -40,20 +40,11 @@ namespace ToDoList
             MessageBox.Show("Feladatok elmentve!");
         }
 
-        private void buttonLoad_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
-            if (File.Exists("todos.txt"))
-            {
-                checkedListBoxTodos.Items.Clear();
-                using (StreamReader reader = new StreamReader("todos.txt"))
-                {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        checkedListBoxTodos.Items.Add(line);
-                    }
-                }
-            }
+            Form2 frm = new();
+            frm.Show();
+            this.Hide();
         }
     }
 }

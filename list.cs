@@ -1,13 +1,12 @@
 namespace ToDoList
 {
-    public partial class Form1 : Form
+    public partial class list : Form
     {
-        private int score = 0;
-        public Form1()
+        public list()
         {
             InitializeComponent();
+            points.Text = DataStore.Score + " points";  
         }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             string todo = textBoxTodo.Text.Trim();
@@ -17,32 +16,18 @@ namespace ToDoList
                 textBoxTodo.Clear();
             }
         }
-
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             for (int i = checkedListBoxTodos.CheckedItems.Count - 1; i >= 0; i--)
             {
                 checkedListBoxTodos.Items.Remove(checkedListBoxTodos.CheckedItems[i]);
-                score += 10; 
+                DataStore.Score += 10; 
             }
-            points.Text = score.ToString() + " pont";
+            points.Text = DataStore.Score.ToString() + " pont";
         }
-
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-            using (StreamWriter writer = new StreamWriter("todos.txt"))
-            {
-                foreach (var item in checkedListBoxTodos.Items)
-                {
-                    writer.WriteLine(item.ToString());
-                }
-            }
-            MessageBox.Show("Feladatok elmentve!");
-        }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            Form2 frm = new();
+            menu frm = new();
             frm.Show();
             this.Hide();
         }

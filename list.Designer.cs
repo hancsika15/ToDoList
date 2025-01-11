@@ -1,6 +1,6 @@
 ﻿namespace ToDoList
 {
-    partial class Form1
+    partial class list
     {
         /// <summary>
         ///  Required designer variable.
@@ -85,7 +85,7 @@
             buttonExit.TabIndex = 3;
             buttonExit.Text = "Exit";
             buttonExit.UseVisualStyleBackColor = true;
-            buttonExit.Click += buttonLoad_Click;
+            buttonExit.Click += buttonExit_Click;
             // 
             // label1
             // 
@@ -100,13 +100,14 @@
             // points
             // 
             points.AutoSize = true;
-            points.Font = new Font("Times New Roman", 19.875F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            points.Font = new Font("Times New Roman", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 238);
             points.Location = new Point(1212, 209);
             points.Name = "points";
-            points.Size = new Size(0, 61);
+            points.Size = new Size(135, 61);
             points.TabIndex = 5;
+            points.Text = "####";
             // 
-            // Form1
+            // list
             // 
             ClientSize = new Size(1464, 1021);
             Controls.Add(points);
@@ -118,7 +119,7 @@
             Controls.Add(textBoxTodo);
             MaximumSize = new Size(1490, 1092);
             MinimumSize = new Size(1490, 1092);
-            Name = "Form1";
+            Name = "list";
             ResumeLayout(false);
             PerformLayout();
         }

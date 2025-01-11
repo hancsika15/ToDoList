@@ -1,6 +1,6 @@
 ﻿namespace ToDoList
 {
-    partial class Form2
+    partial class menu
     {
         /// <summary>
         /// Required designer variable.
@@ -65,6 +65,7 @@
             GameBtn.TabIndex = 2;
             GameBtn.Text = "Game";
             GameBtn.UseVisualStyleBackColor = true;
+            GameBtn.Click += GameBtn_Click;
             // 
             // ExitBtn
             // 
@@ -75,8 +76,9 @@
             ExitBtn.TabIndex = 3;
             ExitBtn.Text = "Exit";
             ExitBtn.UseVisualStyleBackColor = true;
+            ExitBtn.Click += ExitBtn_Click;
             // 
-            // Form2
+            // menu
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -85,7 +87,7 @@
             Controls.Add(GameBtn);
             Controls.Add(ToDoListBtn);
             Controls.Add(label1);
-            Name = "Form2";
+            Name = "menu";
             Text = "Form2";
             ResumeLayout(false);
             PerformLayout();

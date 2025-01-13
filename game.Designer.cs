@@ -53,6 +53,7 @@
             UpgradeBtn.TabIndex = 1;
             UpgradeBtn.Text = "Upgrade";
             UpgradeBtn.UseVisualStyleBackColor = true;
+            UpgradeBtn.Click += UpgradeBtn_Click;
             // 
             // ExitBtn
             // 

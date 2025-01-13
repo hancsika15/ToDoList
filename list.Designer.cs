@@ -35,6 +35,8 @@
             buttonExit = new Button();
             label1 = new Label();
             points = new Label();
+            buttonSave = new Button();
+            buttonLoad = new Button();
             SuspendLayout();
             // 
             // textBoxTodo
@@ -42,7 +44,7 @@
             textBoxTodo.Font = new Font("Times New Roman", 19.875F);
             textBoxTodo.Location = new Point(18, 202);
             textBoxTodo.Name = "textBoxTodo";
-            textBoxTodo.Size = new Size(1132, 68);
+            textBoxTodo.Size = new Size(1240, 68);
             textBoxTodo.TabIndex = 0;
             // 
             // buttonAdd
@@ -79,9 +81,9 @@
             // buttonExit
             // 
             buttonExit.Font = new Font("Times New Roman", 19.875F);
-            buttonExit.Location = new Point(1264, 290);
+            buttonExit.Location = new Point(12, 1015);
             buttonExit.Name = "buttonExit";
-            buttonExit.Size = new Size(188, 719);
+            buttonExit.Size = new Size(1548, 109);
             buttonExit.TabIndex = 3;
             buttonExit.Text = "Exit";
             buttonExit.UseVisualStyleBackColor = true;
@@ -101,31 +103,52 @@
             // 
             points.AutoSize = true;
             points.Font = new Font("Times New Roman", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            points.Location = new Point(1212, 209);
+            points.Location = new Point(1342, 209);
             points.Name = "points";
             points.Size = new Size(135, 61);
             points.TabIndex = 5;
             points.Text = "####";
             // 
+            // buttonSave
+            // 
+            buttonSave.Font = new Font("Times New Roman", 19.875F);
+            buttonSave.Location = new Point(1264, 290);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(296, 355);
+            buttonSave.TabIndex = 1;
+            buttonSave.Text = "Save";
+            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += this.buttonSave_Click;
+            // 
+            // buttonLoad
+            // 
+            buttonLoad.Font = new Font("Times New Roman", 19.875F);
+            buttonLoad.Location = new Point(1264, 651);
+            buttonLoad.Name = "buttonLoad";
+            buttonLoad.Size = new Size(296, 355);
+            buttonLoad.TabIndex = 1;
+            buttonLoad.Text = "Loading";
+            buttonLoad.UseVisualStyleBackColor = true;
+            buttonLoad.Click += buttonLoad_Click;
+            // 
             // list
             // 
-            ClientSize = new Size(1464, 1021);
+            ClientSize = new Size(1579, 1136);
             Controls.Add(points);
             Controls.Add(label1);
             Controls.Add(buttonExit);
             Controls.Add(buttonRemove);
             Controls.Add(checkedListBoxTodos);
+            Controls.Add(buttonLoad);
+            Controls.Add(buttonSave);
             Controls.Add(buttonAdd);
             Controls.Add(textBoxTodo);
-            MaximumSize = new Size(1490, 1092);
-            MinimumSize = new Size(1490, 1092);
             Name = "list";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private TextBox textBox1;
         private Button btnAdd;
         private TableLayoutPanel tableLayoutPanel1;
         private TextBox textBoxTodo;
@@ -136,5 +159,6 @@
         private Button buttonExit;
         private Label label1;
         private Label points;
+        private Button buttonLoad;
     }
 }

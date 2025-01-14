@@ -16,21 +16,23 @@ public partial class game : Form
     private int score;
     private List<Image> images;
     private int currentIndex;
+    private string imagepath;
 
     public game()
     {
         InitializeComponent();
         score = DataStore.Score;
         pointsLbl.Text = score.ToString() + " points";
+        imagepath = @"Properties\\resources\\";
 
         images = new List<Image>
         {
-                Image.FromFile("D:\\ToDoList\\Properties\\resources\\flower01.png"),
-                Image.FromFile("D:\\ToDoList\\Properties\\resources\\flower02.png"),
-                Image.FromFile("D:\\ToDoList\\Properties\\resources\\flower03.png"),
-                Image.FromFile("D:\\ToDoList\\Properties\\resources\\flower04.png"),
-                Image.FromFile("D:\\ToDoList\\Properties\\resources\\flower05.png"),
-                Image.FromFile("D:\\ToDoList\\Properties\\resources\\flower06.png")
+                Image.FromFile(imagepath + "flower01.png"),
+                Image.FromFile(imagepath + "flower02.png"),
+                Image.FromFile(imagepath + "flower03.png"),
+                Image.FromFile(imagepath + "flower04.png"),
+                Image.FromFile(imagepath + "flower05.png"),
+                Image.FromFile(imagepath + "flower06.png")
         };
 
         currentIndex = 0;

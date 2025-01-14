@@ -29,26 +29,43 @@ namespace ToDoList
         {
             using (StreamWriter writer = new StreamWriter("todos.txt"))
             {
+                // Mentés: Pontszám
+                writer.WriteLine(DataStore.Score);
+
+                // Mentés: Feladatok
                 foreach (var item in checkedListBoxTodos.Items)
                 {
                     writer.WriteLine(item.ToString());
                 }
             }
-            MessageBox.Show("Feladatok elmentve!");
+            MessageBox.Show("Feladatok és pontok elmentve!");
         }
         private void buttonLoad_Click(object sender, EventArgs e)
         {
             if (File.Exists("todos.txt"))
             {
-                checkedListBoxTodos.Items.Clear();
                 using (StreamReader reader = new StreamReader("todos.txt"))
                 {
+                    // Betöltés: Pontszám
+                    if (int.TryParse(reader.ReadLine(), out int loadedScore))
+                    {
+                        DataStore.Score = loadedScore;
+                        points.Text = DataStore.Score + " points";
+                    }
+
+                    // Betöltés: Feladatok
+                    checkedListBoxTodos.Items.Clear();
                     string line;
                     while ((line = reader.ReadLine()) != null)
                     {
                         checkedListBoxTodos.Items.Add(line);
                     }
                 }
+                MessageBox.Show("Feladatok és pontok betöltve!");
+            }
+            else
+            {
+                MessageBox.Show("Nincs elmentett adat.");
             }
         }
         private void buttonExit_Click(object sender, EventArgs e)

@@ -38,20 +38,21 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(72, 141);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Location = new Point(63, 106);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(369, 469);
+            pictureBox1.Size = new Size(323, 352);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // UpgradeBtn
             // 
             UpgradeBtn.Font = new Font("Times New Roman", 24F, FontStyle.Bold);
-            UpgradeBtn.Location = new Point(10, 614);
-            UpgradeBtn.Margin = new Padding(2, 2, 2, 2);
+            UpgradeBtn.Location = new Point(9, 460);
+            UpgradeBtn.Margin = new Padding(2);
             UpgradeBtn.Name = "UpgradeBtn";
-            UpgradeBtn.Size = new Size(240, 81);
+            UpgradeBtn.Size = new Size(210, 61);
             UpgradeBtn.TabIndex = 1;
             UpgradeBtn.Text = "Upgrade";
             UpgradeBtn.UseVisualStyleBackColor = true;
@@ -60,10 +61,10 @@
             // ExitBtn
             // 
             ExitBtn.Font = new Font("Times New Roman", 24F, FontStyle.Bold);
-            ExitBtn.Location = new Point(254, 614);
-            ExitBtn.Margin = new Padding(2, 2, 2, 2);
+            ExitBtn.Location = new Point(222, 460);
+            ExitBtn.Margin = new Padding(2);
             ExitBtn.Name = "ExitBtn";
-            ExitBtn.Size = new Size(240, 81);
+            ExitBtn.Size = new Size(210, 61);
             ExitBtn.TabIndex = 1;
             ExitBtn.Text = "Exit";
             ExitBtn.UseVisualStyleBackColor = true;
@@ -73,10 +74,10 @@
             // 
             pointsLbl.AutoSize = true;
             pointsLbl.Font = new Font("Times New Roman", 16.125F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            pointsLbl.Location = new Point(206, 6);
+            pointsLbl.Location = new Point(180, 4);
             pointsLbl.Margin = new Padding(2, 0, 2, 0);
             pointsLbl.Name = "pointsLbl";
-            pointsLbl.Size = new Size(70, 31);
+            pointsLbl.Size = new Size(56, 25);
             pointsLbl.TabIndex = 2;
             pointsLbl.Text = "####";
             // 
@@ -84,27 +85,27 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label1.Location = new Point(52, 48);
+            label1.Location = new Point(46, 36);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(416, 90);
+            label1.Size = new Size(335, 72);
             label1.TabIndex = 3;
             label1.Text = "To develop your flower \r\nyou need 50 points!";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // game
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(513, 701);
+            ClientSize = new Size(451, 532);
             Controls.Add(label1);
             Controls.Add(pointsLbl);
             Controls.Add(ExitBtn);
             Controls.Add(UpgradeBtn);
             Controls.Add(pictureBox1);
-            Margin = new Padding(2, 2, 2, 2);
-            MaximumSize = new Size(531, 748);
-            MinimumSize = new Size(531, 748);
+            Margin = new Padding(2);
+            MaximumSize = new Size(467, 571);
+            MinimumSize = new Size(467, 571);
             Name = "game";
             Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

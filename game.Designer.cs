@@ -92,7 +92,7 @@
             label1.Name = "label1";
             label1.Size = new Size(335, 72);
             label1.TabIndex = 3;
-            label1.Text = "To develop your flower \r\nyou need 50 points!";
+            label1.Text = "To develop your flower \r\nyou need 10 points!";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // game

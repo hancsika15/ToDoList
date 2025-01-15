@@ -48,21 +48,21 @@ public partial class game : Form
 
     private void UpgradeBtn_Click(object sender, EventArgs e)
     {
-        if (score >= 50)
+        if (score >= 10)
         {
             currentIndex = (currentIndex + 1) % images.Count;
             pictureBox1.Image = images[currentIndex];
             MessageBox.Show(
                 text: "Gratulálok sikeresen fejlesztetted a virágot");
             
-            score -= 50;
+            score -= 10;
             pointsLbl.Text = score.ToString() + " points";
             DataStore.Score = score;
         }
         else
         {
             MessageBox.Show(
-                text: "A virág fejlesztéséhez min 50 pont kell!");
+                text: "A virág fejlesztéséhez min 10 pont kell!");
         }
 
     }

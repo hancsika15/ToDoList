@@ -48,6 +48,7 @@
             // 
             // UpgradeBtn
             // 
+            UpgradeBtn.BackColor = Color.LightCoral;
             UpgradeBtn.Font = new Font("Times New Roman", 24F, FontStyle.Bold);
             UpgradeBtn.Location = new Point(9, 460);
             UpgradeBtn.Margin = new Padding(2);
@@ -55,11 +56,12 @@
             UpgradeBtn.Size = new Size(210, 61);
             UpgradeBtn.TabIndex = 1;
             UpgradeBtn.Text = "Upgrade";
-            UpgradeBtn.UseVisualStyleBackColor = true;
+            UpgradeBtn.UseVisualStyleBackColor = false;
             UpgradeBtn.Click += UpgradeBtn_Click;
             // 
             // ExitBtn
             // 
+            ExitBtn.BackColor = Color.LightCoral;
             ExitBtn.Font = new Font("Times New Roman", 24F, FontStyle.Bold);
             ExitBtn.Location = new Point(222, 460);
             ExitBtn.Margin = new Padding(2);
@@ -67,7 +69,7 @@
             ExitBtn.Size = new Size(210, 61);
             ExitBtn.TabIndex = 1;
             ExitBtn.Text = "Exit";
-            ExitBtn.UseVisualStyleBackColor = true;
+            ExitBtn.UseVisualStyleBackColor = false;
             ExitBtn.Click += ExitBtn_Click;
             // 
             // pointsLbl
@@ -97,6 +99,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.MistyRose;
             ClientSize = new Size(451, 532);
             Controls.Add(label1);
             Controls.Add(pointsLbl);
